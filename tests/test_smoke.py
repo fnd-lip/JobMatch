@@ -1,8 +1,8 @@
 ﻿from pathlib import Path
 
-from src.pipeline.data import load_jobs_from_csv
-from src.pipeline.recommender import recommend_jobs
-from src.pipeline.text import normalize_text
+from src.pipeline.demo.data import load_jobs_from_csv
+from src.pipeline.demo.recommender import recommend_jobs
+from src.pipeline.utils.text import normalize_text
 
 
 def test_smoke_jobmatch_pipeline():

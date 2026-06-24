@@ -1,8 +1,8 @@
 ﻿from __future__ import annotations
 
 from src.observability.mlflow_dagshub import registrar_execucao_mlflow
-from src.pipeline.artefatos import carregar_artefatos
-from src.pipeline.validacao_artefatos import (
+from src.pipeline.inferencia.artefatos import carregar_artefatos
+from src.pipeline.inferencia.validacao_artefatos import (
     salvar_relatorio_validacao,
     validar_artefatos,
 )

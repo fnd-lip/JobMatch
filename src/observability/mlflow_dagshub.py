@@ -7,7 +7,7 @@ from typing import Any
 import mlflow
 from dotenv import load_dotenv
 
-from src.pipeline.artefatos import CAMINHO_MODELO
+from src.pipeline.inferencia.artefatos import CAMINHO_MODELO
 
 load_dotenv(override=True)
 

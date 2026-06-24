@@ -4,8 +4,8 @@ from typing import Any
 
 import streamlit as st
 
-from src.pipeline.artefatos import carregar_artefatos
-from src.pipeline.recomendador_modelo import recomendar_top_vagas_modelo
+from src.pipeline.inferencia.artefatos import carregar_artefatos
+from src.pipeline.inferencia.recomendador_modelo import recomendar_top_vagas_modelo
 
 EXEMPLOS_PERFIL = {
     "Dados / Machine Learning": (
@@ -121,7 +121,7 @@ def main() -> None:
     )
 
     st.title("💼 JobMatch AI")
-    st.caption("Recomendação de vagas com o artefato completo de Machine Learning.")
+    st.caption("Encontre vagas compat\u00edveis com seu perfil profissional.")
 
     artefatos = carregar_modelo()
     total_vagas = len(artefatos["dados_vagas"])
@@ -143,8 +143,7 @@ def main() -> None:
 
         st.divider()
 
-        st.metric("Vagas no modelo", f"{total_vagas:,}".replace(",", "."))
-        st.write("A recomendação usa o artefato `jobmatch_ai_artifacts.pkl.gz`.")
+        st.metric("Vagas dispon\u00edveis", f"{total_vagas:,}".replace(",", "."))
 
     perfil_padrao = ""
 
@@ -152,9 +151,10 @@ def main() -> None:
         perfil_padrao = EXEMPLOS_PERFIL[exemplo_escolhido]
 
     st.markdown("""
-        Informe um perfil profissional ou cole um currículo resumido.  
-        O sistema compara o perfil com as vagas do artefato treinado e retorna ranking,
-        score, classificação Fit/No Fit, skills e salário estimado.
+        Informe um perfil profissional ou cole um curr\u00edculo resumido.
+        O sistema analisa seu perfil e recomenda vagas mais compat\u00edveis,
+        mostrando n\u00edvel de ader\u00eancia, skills em comum, pontos de melhoria
+        e sal\u00e1rio estimado.
         """)
 
     candidate_profile = st.text_area(
@@ -174,7 +174,7 @@ def main() -> None:
             st.warning("Informe o perfil do candidato antes de buscar vagas.")
             st.stop()
 
-        with st.spinner("Analisando perfil com o modelo completo..."):
+        with st.spinner("Analisando perfil e buscando vagas compatíveis..."):
             recommendations = recomendar_top_vagas_modelo(
                 texto_curriculo=candidate_profile,
                 artefatos=artefatos,

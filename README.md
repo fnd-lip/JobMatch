@@ -26,13 +26,13 @@ O projeto recebe um perfil profissional ou currículo em texto livre e retorna v
 ## Validação
 
 ```powershell
-python -m ruff check src tests
+python -m ruff check app.py src tests
 python -m src.pipeline.registrar_modelo_mlflow
 ```
 
 ## Interface
 
 ```powershell
-streamlit run src\ui\streamlit_app.py
+streamlit run app.py
 ```
 

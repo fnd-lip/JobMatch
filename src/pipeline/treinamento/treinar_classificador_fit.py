@@ -10,8 +10,8 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, confusion_matrix, f1_score
 from sklearn.model_selection import train_test_split
 
-from src.pipeline.artefatos import CAMINHO_MODELO
-from src.pipeline.features_classificacao import (
+from src.pipeline.inferencia.artefatos import CAMINHO_MODELO
+from src.pipeline.treinamento.features_classificacao import (
     RANDOM_STATE,
     criar_pipeline_classificacao_estavel,
 )
