@@ -17,3 +17,5 @@ artifacts/relatorio_validacao_modelo.json
 mlruns/
 diagnostico_codigo.txt
 data/processed/
+
+!artifacts/jobmatch_ai_artifacts.pkl.gz
