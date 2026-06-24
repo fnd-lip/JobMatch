@@ -1,0 +1,11 @@
+[project]
+name = "jobmatch-ai"
+version = "0.1.0"
+description = "Sistema de recomendação de vagas com NLP, Machine Learning e MLflow."
+requires-python = ">=3.13"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]

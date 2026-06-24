@@ -1,0 +1,7 @@
+﻿job_id,title,description,skills,salary_min,salary_max
+1,Data Scientist,"Python pandas machine learning SQL estatistica modelos preditivos analise de dados","python;pandas;machine learning;sql;estatistica",7000,12000
+2,Frontend Developer,"React TypeScript CSS HTML interfaces web componentes frontend","react;typescript;css;html",5000,9000
+3,Backend Developer,"Python FastAPI SQL APIs Docker backend banco de dados","python;fastapi;sql;docker;apis",6500,11000
+4,Machine Learning Engineer,"Python scikit-learn pipelines machine learning deploy modelos mlops","python;scikit-learn;machine learning;mlops;docker",9000,15000
+5,Data Analyst,"SQL Power BI Excel dashboards indicadores analise de dados relatorios","sql;power bi;excel;dashboards;analise de dados",4500,8000
+6,DevOps Engineer,"Docker Kubernetes CI CD cloud monitoramento infraestrutura deploy","docker;kubernetes;ci cd;cloud",8000,14000
