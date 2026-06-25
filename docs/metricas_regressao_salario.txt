@@ -1,0 +1,8 @@
+﻿Métricas de Regressão - Salário
+
+Modelo: TF-IDF + TruncatedSVD + RandomForestRegressor
+Quantidade usada: 8651 vagas
+
+MAE: 23732.911753575652
+RMSE: 35458.471864317595
+R²: 0.5251517270364228
